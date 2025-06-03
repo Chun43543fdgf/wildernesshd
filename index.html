@@ -1,27 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="km">
 <head>
-    <title>wilderness hd</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            color: #ff6600;
-        }
-        p {
-            color: #333333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Wilderness HD</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0d8c3; /* earth-tone background */
+      color: #333333;
+      text-align: center;
+    }
+    header {
+      background-color: #6b4f1d; /* jungle brown */
+      color: #ffffff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    a {
+      color: #4e3817;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #6b4f1d;
+      color: #ffffff;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #6b4f1d;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #6b4f1d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #5a3f17;
+    }
+  </style>
 </head>
 <body>
-    <h1>welcomto channel </h1>
-    <p>WILDERNESS HD </p>
-<img src="image.jpg" alt="រូបភាពរបស់ខ្ញុំ" width="300">
+
+  <header>
+    <h1>wilderness hd </h1>
+  </header>
+
+  <div class="content">
+    <p>ស្វាគមន៍មកកាន់វេបសាយមួយដែលបង្ហាញអំពីជំនាញរស់នៅក្នុងព្រៃ និងបរិយាកាសធម្មជាតិ។</p>
+    <img src="https://raw.githubusercontent.com/Chun43543fdgf/wildernesshd/main/logo.jpg" alt="wildernesshd" width="500">
+    <p>សូមចូលទៅកាន់ <a href="https://www.youtube.com/@WildernesshdD" target="_blank">Channel របស់យើង</a> ដើម្បីស្វែងយល់បន្ថែម។</p>
+
+    <h2>ទាក់ទងមកយើង</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="ឈ្មោះ" required><br>
+      <input type="email" name="email" placeholder="អ៊ីមែល" required><br>
+      <textarea name="message" placeholder="សារ..." required></textarea><br>
+      <button type="submit">ផ្ញើសារ</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 wildernesshd
+  </footer>
 
 
-</body>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</script>
+<p class="fade-in">នេះគឺជាអត្ថបទមាន animation នៅពេល scroll!</p>
+
 </body>
 </html>
